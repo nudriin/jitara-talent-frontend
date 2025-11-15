@@ -484,6 +484,9 @@
   .w-\[700px\] {
     width: 700px;
   }
+  .w-auto {
+    width: auto;
+  }
   .w-full {
     width: 100%;
   }
