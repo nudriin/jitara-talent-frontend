@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body>
-    <section class="hero-section">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
         <!-- content -->
-        <div class="hero-content">
-            <div>
-                <h1>Platform Pendaftaran
+        <div class="relative z-10 container mx-auto px-4 py-32 text-center">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <h1 class="text-5xl md:text-7xl font-display font-bold leading-tight text-foreground text-blue-500">
+                    Platform
+                    Pendaftaran
                     <br />
-                    <span>Talent Profesional</span>
+                    <span class="gradient-text">Talent Profesional</span>
                 </h1>
 
-                <p>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                     Daftar sebagai talent, lengkapi profil dan berkas untuk verifikasi.
                     Bergabunglah dengan platform talent terdepan untuk peluang karir terbaik.
                 </p>
 
-                <div className="button-container">
-                    <a class="btn-register" href="/pages/auth/register.html">Mulai Daftar</a>
-                    <a href=""></a>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+                    <a class="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md professional-hover text-lg px-8 font-semibold"
+                        href="/pages/auth/register.html">Mulai Daftar</a>
+                    <a class="text-lg px-8 font-semibold border-2 hover:bg-secondary"
+                        href="/pages/auth/login.html">Masuk</a>
                 </div>
 
             </div>
