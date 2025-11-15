@@ -2,67 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jitara Talent</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 </head>
 
-<body>
+<body class="antialiased">
     <!-- header -->
-    <header
-        class="fixed bg-white/95 z-50 w-full grid grid-cols-3 border-b-2 border-b-slate-100 items-center justify-center h-18 px-10">
-        <div class="font-bold col-span-1 justify-start">
-            <h1 class="text-xl">Jitara Talent</h1>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-b-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- brand -->
+                <div class="flex items-center gap-6">
+                    <a class="text-xl font-bold" href="#">Jitara Talent</a>
+                </div>
+
+                <!-- nav - desktop -->
+                <nav class="hidden md:flex items-center gap-6 text-slate-600">
+                    <a class="hover:underline" href="#">Blog</a>
+                    <a class="hover:underline" href="#">FAQ</a>
+                </nav>
+
+                <!-- actions + mobile toggle -->
+                <div class="flex items-center gap-3">
+                    <!-- desktop buttons -->
+                    <div class="hidden md:flex items-center gap-2">
+                        <a href="/pages/auth/login.html"
+                            class="px-4 py-2 rounded-xl hover:scale-105 transition-transform duration-300 hover:bg-slate-200 text-sm">Masuk</a>
+                        <a href="/pages/auth/register.html"
+                            class="px-4 py-2 rounded-xl text-white bg-linear-to-r from-jitara-blue to-jitara-orange text-sm shadow-md hover:scale-105 transition-transform duration-300">Daftar</a>
+                    </div>
+
+                    <!-- mobile hamburger -->
+                    <button id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu"
+                        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100">
+                        <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="space-x-4 text-slate-500 col-span-1 flex justify-center">
-            <a>Blog</a>
-            <a>FAQ</a>
-        </div>
-        <div class="col-span-1 flex justify-end gap-2">
-            <a href="/pages/auth/login.html"
-                class="px-4 py-2 hover:scale-105 transition-transform duration-300 hover:bg-slate-200 rounded-xl">Masuk</a>
-            <a href="/pages/auth/register.html"
-                class="px-4 py-2 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-xl text-white hover:scale-105 transition-transform duration-300">Daftar</a>
+
+        <!-- mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
+            <div class="px-4 pt-4 pb-6 space-y-3">
+                <a class="block text-slate-700 py-2" href="#">Blog</a>
+                <a class="block text-slate-700 py-2" href="#">FAQ</a>
+
+                <a class="block w-full text-center px-4 py-3 rounded-xl bg-linear-to-r from-jitara-blue to-jitara-orange text-white font-semibold"
+                    href="/pages/auth/register.html">Daftar</a>
+                <a class="block w-full text-center px-4 py-3 rounded-xl border border-slate-200"
+                    href="/pages/auth/login.html">Masuk</a>
+            </div>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-200/30 pt-18">
-        <!-- Radial Glow -->
-        <!-- <div class="pointer-events-none absolute inset-0">
+    <main class="pt-16">
+        <section
+            class="relative min-h-[calc(100vh-64px)] flex items-center justify-center overflow-hidden bg-slate-200/30">
+            <!-- floating elements -->
             <div
-                class="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 blur-[160px] rounded-full">
-            </div>
-        </div> -->
-
-        <!-- Floating Left -->
-        <div class="hidden lg:block absolute bottom-[20%] left-[10%]
-            rounded-2xl p-8
-            bg-blue-500/10 border border-blue-500/30
-            backdrop-blur-md
-            animate-float">
-            <div class="text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
+                class="hidden lg:block absolute bottom-[26%] left-8 rounded-2xl p-6 bg-blue-500/10 border border-blue-500/30 backdrop-blur-md animate-float">
+                <!-- icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="w-8 h-8">
                     <path
                         d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
                 </svg>
             </div>
-        </div>
 
-        <!-- Floating Right -->
-        <div class="hidden lg:block absolute top-[30%] right-[10%]
-            rounded-2xl p-8
-            bg-blue-500/10 border border-blue-500/30
-            backdrop-blur-md
-            animate-float [animation-delay:1s]">
-            <div class="text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
+            <div
+                class="hidden lg:block absolute top-[26%] right-8 rounded-2xl p-6 bg-blue-500/10 border border-blue-500/30 backdrop-blur-md animate-float [animation-delay:1s]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="w-8 h-8">
                     <path fill-rule="evenodd"
                         d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
                         clip-rule="evenodd" />
@@ -70,312 +95,309 @@
                         d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
                 </svg>
             </div>
-        </div>
 
-        <!-- content -->
-        <div class="relative z-10 mx-auto px-4 py-32 text-center">
-            <div class="max-w-4xl mx-auto space-y-8">
-                <h1 class="text-5xl md:text-7xl font-display font-bold leading-[70px]">
-                    Platform
-                    Pendaftaran
-                    <br />
-                    <span
-                        class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Talent
-                        Profesional</span>
-                </h1>
+            <!-- content -->
+            <div class="relative z-10 mx-auto px-4 py-32 text-center">
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <h1 class="text-3xl md:text-7xl font-display font-bold leading-10 md:leading-[70px]">
+                        Platform
+                        Pendaftaran
+                        <br />
+                        <span
+                            class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Talent
+                            Profesional</span>
+                    </h1>
 
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                    Daftar sebagai talent, lengkapi profil dan berkas untuk verifikasi.
-                    Bergabunglah dengan platform talent terdepan untuk peluang karir terbaik.
-                </p>
+                    <p class="text-md md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                        Daftar sebagai talent, lengkapi profil dan berkas untuk verifikasi.
+                        Bergabunglah dengan platform talent terdepan untuk peluang karir terbaik.
+                    </p>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-                    <a class="bg-linear-to-r from-jitara-blue to-jitara-orange text-white hover:bg-jitara-orange/90 shadow-md professional-hover text-lg px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300"
-                        href="/pages/auth/register.html">Daftar</a>
-                    <a class="text-lg px-8 font-semibold border-2 border-slate-500 py-3 rounded-xl hover:bg-slate-200 hover:scale-105 transition-transform duration-300"
-                        href="/pages/auth/login.html">Masuk</a>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+                        <a class="bg-linear-to-r from-jitara-blue to-jitara-orange text-white hover:bg-jitara-orange/90 shadow-md professional-hover text-lg px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300"
+                            href="/pages/auth/register.html">Daftar</a>
+                        <a class="text-lg px-8 font-semibold border border-slate-500 py-3 rounded-xl hover:bg-slate-200 hover:scale-105 transition-transform duration-300"
+                            href="/pages/auth/login.html">Masuk</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- step-by-step fitur -->
-    <section class="relative py-24 overflow-hidden bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-                    Cara <span class="gradient-text">Memulai</span>
-                </h2>
-                <p class="text-slate-500 text-lg max-w-2xl mx-auto">
-                    Tiga langkah sederhana untuk memulai perjalanan karir Anda
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- card 1 -->
-                <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
-                    <div
-                        class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
-                    </div>
-                    <div
-                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
-                        1
-                    </div>
-
-                    <div
-                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
-                            <path
-                                d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
-                        </svg>
-
-                    </div>
-                    <h3 class="text-2xl font-display font-bold mb-3">Daftar jadi talent</h3>
-                    <p class="text-slate-500 leading-relaxed">Buat akun Jitara Talent secara gratis.</p>
+        <!-- step-by-step fitur -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-3">
+                        Cara <span
+                            class="bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Memulai</span>
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Tiga langkah sederhana untuk memulai perjalanan karir Anda
+                    </p>
                 </div>
-                <!-- card 2 -->
-                <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <!-- card 1 -->
                     <div
-                        class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                        </div>
+                        <div
+                            class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
+                            1
+                        </div>
+
+                        <div
+                            class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
+                                <path
+                                    d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
+                            </svg>
+
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-3">Daftar jadi talent</h3>
+                        <p class="text-slate-500 leading-relaxed">Buat akun Jitara Talent secara gratis.</p>
                     </div>
+                    <!-- card 2 -->
                     <div
-                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
-                        2
-                    </div>
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                        </div>
+                        <div
+                            class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
+                            2
+                        </div>
 
-                    <div
-                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
-                            <path fill-rule="evenodd"
-                                d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                clip-rule="evenodd" />
-                            <path
-                                d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
-                        </svg>
-
-
-                    </div>
-                    <h3 class="text-2xl font-display font-bold mb-3">Isi profil diri</h3>
-                    <p class="text-slate-500 leading-relaxed">Lengkapi data pribadi dan pengalaman.</p>
-                </div>
-                <!-- card 3 -->
-                <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
-                    <div
-                        class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
-                    </div>
-                    <div
-                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
-                        3
-                    </div>
-
-                    <div
-                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
-                            <path fill-rule="evenodd"
-                                d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-
-                    </div>
-                    <h3 class="text-2xl font-display font-bold mb-3">Lengkapi berkas</h3>
-                    <p class="text-slate-500 leading-relaxed">Unggah CV, KTP, ijazah, dan sertifikat.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- info -->
-    <section class="relative py-24 overflow-hidden bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- card 1 -->
-                <div
-                    class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
-                    <div>
                         <div
                             class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                                 <path fill-rule="evenodd"
-                                    d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                                    d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
                                     clip-rule="evenodd" />
                                 <path
-                                    d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
+                                    d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
 
+
                         </div>
-                        <h3 class="text-2xl font-display font-bold mb-3">Untuk Pencari Kerja</h3>
-                        <p class="text-slate-500 leading-relaxed">Buat akun, isi profil, dan unggah berkas
-                            seperti
-                            CV, KTP, ijazah untuk diverifikasi.</p>
+                        <h3 class="text-2xl font-display font-bold mb-3">Isi profil diri</h3>
+                        <p class="text-slate-500 leading-relaxed">Lengkapi data pribadi dan pengalaman.</p>
                     </div>
-                    <a class="mt-10 bg-linear-to-r from-jitara-blue to-jitara-orange text-white hover:bg-jitara-orange/90 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
-                        href="/pages/auth/register.html">Mulai Daftar</a>
-                </div>
-
-                <!-- card 2 -->
-                <div
-                    class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                    <!-- card 3 -->
                     <div
-                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
-                            <path fill-rule="evenodd"
-                                d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-display font-bold mb-3">Untuk Admin</h3>
-                        <p class="text-slate-500 leading-relaxed mb-10">Pantau pendaftar, cek kelengkapan berkas,
-                            dan tetapkan status verifikasi.</p>
-                    </div>
-                    <a class="border border-slate-500 hover:bg-slate-200 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
-                        href="/pages/auth/register.html">Masuk Admin</a>
-                </div>
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                        </div>
+                        <div
+                            class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
+                            3
+                        </div>
 
-                <!-- card 3 -->
-                <div
-                    class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
-                    <div>
                         <div
                             class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                                 <path fill-rule="evenodd"
-                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                                    d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
                                     clip-rule="evenodd" />
                             </svg>
-
                         </div>
-                        <h3 class="text-2xl font-display font-bold mb-3">Tentang Jitara Talent</h3>
-                        <p class="text-slate-500 leading-relaxed">Jitara Talent adalah platform yang
-                            menghubungkan talenta dengan peluang kerja secara cepat dan terverifikasi.</p>
+                        <h3 class="text-2xl font-display font-bold mb-3">Lengkapi berkas</h3>
+                        <p class="text-slate-500 leading-relaxed">Unggah CV, KTP, ijazah, dan sertifikat.</p>
                     </div>
-                    <a class="border border-slate-500 hover:bg-slate-200 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
-                        href="/pages/auth/register.html">Pelajari Lebih Lanjut</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- article -->
-    <section class="relative py-24 overflow-hidden bg-slate-200/30">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-                    Artikel <span
-                        class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Terbaru</span>
-                </h2>
-                <p class="text-slate-500 text-lg max-w-2xl mx-auto mb-8">
-                    Tips dan informasi terkini seputar dunia kerja dan pengembangan karir </p>
-                <a class="border border-slate-500 hover:bg-slate-200 shadow-sm px-8 py-2 rounded-xl font-semibold"
-                    href="">Lihat Semua</a>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- card 1 -->
-                <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:shadow-xl transition-shadow duration-300">
-                    <div class="mb-6 w-full h-40 rounded-xl bg-slate-300 overflow-hidden">
-                        <img src="https://media.wired.com/photos/6517554f09807970da6567b8/3:2/w_2560%2Cc_limit/Tips-For-Remote-Work-Business-1441444285.jpg"
-                            alt="Article Image"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <h3 class="text-2xl font-display font-bold mb-3">5 Tips Meningkatkan Peluang
-                        Diterima Kerja</h3>
-                    <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
-                        mempersiapkan
-                        wawancara, dan membangun jaringan profesional.</p>
-                    <a class="text-jitara-blue font-semibold hover:underline" href="/pages/articles/article1.html">Baca
-                        Selengkapnya &rarr;</a>
-                </div>
-                <!-- card 2 -->
-                <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:shadow-xl transition-shadow duration-300">
-                    <div class="mb-6 w-full h-40 rounded-xl bg-slate-300 overflow-hidden">
-                        <img src="https://media.wired.com/photos/6517554f09807970da6567b8/3:2/w_2560%2Cc_limit/Tips-For-Remote-Work-Business-1441444285.jpg"
-                            alt="Article Image"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <h3 class="text-2xl font-display font-bold mb-3">5 Tips Meningkatkan Peluang
-                        Diterima Kerja</h3>
-                    <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
-                        mempersiapkan
-                        wawancara, dan membangun jaringan profesional.</p>
-                    <a class="text-jitara-blue font-semibold hover:underline" href="/pages/articles/article1.html">Baca
-                        Selengkapnya &rarr;</a>
-                </div>
-                <!-- card 3 -->
-                <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:shadow-xl transition-shadow duration-300">
-                    <div class="mb-6 w-full h-40 rounded-xl bg-slate-300 overflow-hidden">
-                        <img src="https://media.wired.com/photos/6517554f09807970da6567b8/3:2/w_2560%2Cc_limit/Tips-For-Remote-Work-Business-1441444285.jpg"
-                            alt="Article Image"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <h3 class="text-2xl font-display font-bold mb-3">5 Tips Meningkatkan Peluang
-                        Diterima Kerja</h3>
-                    <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
-                        mempersiapkan
-                        wawancara, dan membangun jaringan profesional.</p>
-                    <a class="text-jitara-blue font-semibold hover:underline" href="/pages/articles/article1.html">Baca
-                        Selengkapnya &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- info  -->
+        <section class="py-16 bg-white">
+            <div class="mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <!-- card 1 -->
+                    <div
+                        class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div>
+                            <div
+                                class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206"
+                                    class="size-8">
+                                    <path fill-rule="evenodd"
+                                        d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                                        clip-rule="evenodd" />
+                                    <path
+                                        d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" />
+                                </svg>
 
-    <!-- faq -->
-    <section>
-        <div class="container mx-auto px-4 py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-                    FAQ <span
-                        class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Seputar
-                        Jitara Talent</span>
-                </h2>
-                <p class="text-slate-500 text-lg max-w-2xl mx-auto">
-                    Pertanyaan yang sering diajukan tentang penggunaan Jitara Talent </p>
-            </div>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <!-- FAQ 1 -->
-                <div class="border-b border-b-slate-500 pb-4">
-                    <h3 class="text-2xl font-display font-bold mb-2">Bagaimana cara mendaftar sebagai
-                        talent?</h3>
-                    <p class="text-slate-500 leading-relaxed">Untuk mendaftar, klik tombol "Daftar" di halaman
-                        utama,
-                        isi formulir pendaftaran dengan informasi yang diperlukan, dan unggah berkas yang diminta.</p>
-                </div>
-                <!-- FAQ 2 -->
-                <div class="border-b border-b-slate-500 pb-4">
-                    <h3 class="text-2xl font-display font-bold mb-2">Apa saja berkas yang perlu saya
-                        unggah?</h3>
-                    <p class="text-slate-500 leading-relaxed">Anda perlu mengunggah CV, KTP, ijazah terakhir, dan
-                        sertifikat
-                        pendukung
-                        lainnya sesuai dengan persyaratan yang ditetapkan.</p>
-                </div>
-                <!-- FAQ 3 -->
-                <div class="border-b border-b-slate-500 pb-4">
-                    <h3 class="text-2xl font-display font-bold mb-2">Berapa lama proses verifikasi
-                        berlangsung?</h3>
-                    <p class="text-slate-500 leading-relaxed">Proses verifikasi biasanya memakan waktu 3-5 hari
-                        kerja. Anda akan
-                        menerima
-                        notifikasi melalui email mengenai status verifikasi Anda.</p>
-                </div>
-            </div>
-    </section>
+                            </div>
+                            <h3 class="text-2xl font-display font-bold mb-3">Untuk Pencari Kerja</h3>
+                            <p class="text-slate-500 leading-relaxed">Buat akun, isi profil, dan unggah berkas
+                                seperti
+                                CV, KTP, ijazah untuk diverifikasi.</p>
+                        </div>
+                        <a class="mt-10 bg-linear-to-r from-jitara-blue to-jitara-orange text-white hover:bg-jitara-orange/90 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
+                            href="/pages/auth/register.html">Mulai Daftar</a>
+                    </div>
 
+                    <!-- card 2 -->
+                    <div
+                        class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
+                                <path fill-rule="evenodd"
+                                    d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-display font-bold mb-3">Untuk Admin</h3>
+                            <p class="text-slate-500 leading-relaxed mb-10">Pantau pendaftar, cek kelengkapan berkas,
+                                dan tetapkan status verifikasi.</p>
+                        </div>
+                        <a class="border border-slate-500 hover:bg-slate-200 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
+                            href="/pages/auth/register.html">Masuk Admin</a>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div
+                        class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div>
+                            <div
+                                class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206"
+                                    class="size-8">
+                                    <path fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                            <h3 class="text-2xl font-display font-bold mb-3">Tentang Jitara Talent</h3>
+                            <p class="text-slate-500 leading-relaxed">Jitara Talent adalah platform yang
+                                menghubungkan talenta dengan peluang kerja secara cepat dan terverifikasi.</p>
+                        </div>
+                        <a class="border border-slate-500 hover:bg-slate-200 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
+                            href="/pages/auth/register.html">Pelajari Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- article -->
+        <section class="py-16 bg-slate-200/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-2">Artikel
+                        <span
+                            class="bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Terbaru</span>
+                    </h2>
+                    <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto mb-4">Tips dan informasi terkini
+                        seputar dunia
+                        kerja dan pengembangan karir</p>
+                    <a class="inline-block border border-slate-300 px-4 py-2 rounded-xl" href="#">Lihat Semua</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-6 w-full h-40 rounded-xl bg-slate-300 overflow-hidden">
+                            <img src="https://media.wired.com/photos/6517554f09807970da6567b8/3:2/w_2560%2Cc_limit/Tips-For-Remote-Work-Business-1441444285.jpg"
+                                alt="Article Image"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-3">5 Tips Meningkatkan Peluang
+                            Diterima Kerja</h3>
+                        <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
+                            mempersiapkan
+                            wawancara, dan membangun jaringan profesional.</p>
+                        <a class="text-jitara-blue font-semibold hover:underline"
+                            href="/pages/articles/article1.html">Baca
+                            Selengkapnya &rarr;</a>
+                    </div>
+                    <!-- card 2 -->
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-6 w-full h-40 rounded-xl bg-slate-300 overflow-hidden">
+                            <img src="https://media.wired.com/photos/6517554f09807970da6567b8/3:2/w_2560%2Cc_limit/Tips-For-Remote-Work-Business-1441444285.jpg"
+                                alt="Article Image"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-3">5 Tips Meningkatkan Peluang
+                            Diterima Kerja</h3>
+                        <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
+                            mempersiapkan
+                            wawancara, dan membangun jaringan profesional.</p>
+                        <a class="text-jitara-blue font-semibold hover:underline"
+                            href="/pages/articles/article1.html">Baca
+                            Selengkapnya &rarr;</a>
+                    </div>
+                    <!-- card 3 -->
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:shadow-xl transition-shadow duration-300">
+                        <div class="mb-6 w-full h-40 rounded-xl bg-slate-300 overflow-hidden">
+                            <img src="https://media.wired.com/photos/6517554f09807970da6567b8/3:2/w_2560%2Cc_limit/Tips-For-Remote-Work-Business-1441444285.jpg"
+                                alt="Article Image"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-3">5 Tips Meningkatkan Peluang
+                            Diterima Kerja</h3>
+                        <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
+                            mempersiapkan
+                            wawancara, dan membangun jaringan profesional.</p>
+                        <a class="text-jitara-blue font-semibold hover:underline"
+                            href="/pages/articles/article1.html">Baca
+                            Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- faq -->
+        <section class="py-16">
+            <div class="max-w-2xl mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3">FAQ <span
+                            class="bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Seputar
+                            Jitara Talent</span></h2>
+                    <p class="text-sm sm:text-base text-slate-600">Pertanyaan yang sering diajukan tentang penggunaan
+                        Jitara Talent</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="border-b border-slate-200 pb-4">
+                        <h3 class="text-lg font-display font-bold mb-2">Bagaimana cara mendaftar sebagai talent?</h3>
+                        <p class="text-sm text-slate-600">Untuk mendaftar, klik tombol "Daftar" di halaman utama, isi
+                            formulir
+                            pendaftaran dengan informasi yang diperlukan, dan unggah berkas yang diminta.</p>
+                    </div>
+
+                    <div class="border-b border-slate-200 pb-4">
+                        <h3 class="text-lg font-display font-bold mb-2">Apa saja berkas yang perlu saya unggah?</h3>
+                        <p class="text-sm text-slate-600">Anda perlu mengunggah CV, KTP, ijazah terakhir, dan sertifikat
+                            pendukung lainnya sesuai dengan persyaratan yang ditetapkan.</p>
+                    </div>
+
+                    <div class="border-b border-slate-200 pb-4">
+                        <h3 class="text-lg font-display font-bold mb-2">Berapa lama proses verifikasi berlangsung?</h3>
+                        <p class="text-sm text-slate-600">Proses verifikasi biasanya memakan waktu 3-5 hari kerja. Anda
+                            akan
+                            menerima notifikasi melalui email mengenai status verifikasi Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
     <footer class="bg-linear-to-r from-jitara-blue to-jitara-orange">
-        <div class="container mx-auto px-4 py-12">
-            <div class="text-center text-white">
-                <p class="text-sm">&copy; 2025 Jitara Talent. All rights reserved.</p>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 py-10 text-center">
+            <p class="text-sm text-white/95">&copy; 2025 Jitara Talent. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="../assets/js/index.js"></script>
 </body>
 
 </html>
