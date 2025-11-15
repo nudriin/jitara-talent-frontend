@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header
+        class="fixed flex justify-between items-center bg-white/95 z-50 w-full border-b-2 border-b-slate-100 h-18 px-10 gap-2">
+        <h1 class="text-xl font-bold text-foreground">
+            Jitara Talent Admin
+        </h1>
+        <nav class="flex items-center gap-4">
+            <a href="/blog"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-blue-600">
+                Blog
+            </a>
+            <a href="/faq"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-blue-600">
+                FAQ
+            </a>
+            <a href="/pengalaman"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-blue-600">
+                Pengalaman
+            </a>
+            <a href="/kop-surat"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-blue-600">
+                Kop Surat
+            </a>
+            <a href="/talent-pool"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-blue-600">
+                Talent Pool
+            </a>
+            <a href="/clients"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-blue-600">
+                Clients
+            </a>
+            <span class="text-sm text-slate-500 ml-2 bg-slate-200 px-3 py-2 rounded-xl">admin@admin.com</span>
+            <a
+                class="text-sm px-4 py-2 bg-red-500 rounded-xl text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                Keluar
+            </a>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="min-h-screen">
+        <!-- stats card -->
+        <section class="relative py-24 overflow-hidden bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-4 gap-4 max-w-5xl mx-auto">
+                    <!-- stats 1 -->
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="text-sm text-slate-500">Talent</h3>
+                                <p class="text-3xl font-bold leading-relaxed">6</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC"
+                                    class="size-10">
+                                    <path
+                                        d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stats 2 -->
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="text-sm text-slate-500">Profil Lengkap</h3>
+                                <p class="text-3xl font-bold leading-relaxed">3</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC"
+                                    class="size-10">
+                                    <path fill-rule="evenodd"
+                                        d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stats 3 -->
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="text-sm text-slate-500">Berkas Pending</h3>
+                                <p class="text-3xl font-bold leading-relaxed">0</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC"
+                                    class="size-10">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stats 4 -->
+                    <div
+                        class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                        <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h3 class="text-sm text-slate-500">Berkas Verified</h3>
+                                <p class="text-3xl font-bold leading-relaxed">6</p>
+                            </div>
+                            <div class="w-16 h-16 rounded-xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC"
+                                    class="size-10">
+                                    <path fill-rule="evenodd"
+                                        d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625ZM7.5 15a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7.5 15Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H8.25Z"
+                                        clip-rule="evenodd" />
+                                    <path
+                                        d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600">
+        <div class="container mx-auto px-4 py-12">
+            <div class="text-center text-white">
+                <p class="text-sm">&copy; 2025 Jitara Talent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
