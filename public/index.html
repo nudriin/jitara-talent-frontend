@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jitara Talent</title>
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,7 +28,7 @@
             <a href="/pages/auth/login.html"
                 class="px-4 py-2 hover:scale-105 transition-transform duration-300 hover:bg-slate-200 rounded-xl">Masuk</a>
             <a href="/pages/auth/register.html"
-                class="px-4 py-2 bg-blue-600 rounded-xl text-white hover:scale-105 transition-transform duration-300">Daftar</a>
+                class="px-4 py-2 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-xl text-white hover:scale-105 transition-transform duration-300">Daftar</a>
         </div>
     </header>
 
@@ -37,7 +37,7 @@
         <!-- Radial Glow -->
         <!-- <div class="pointer-events-none absolute inset-0">
             <div
-                class="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-600/10 blur-[160px] rounded-full">
+                class="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 blur-[160px] rounded-full">
             </div>
         </div> -->
 
@@ -48,7 +48,7 @@
             backdrop-blur-md
             animate-float">
             <div class="text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                     <path
                         d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
                 </svg>
@@ -62,7 +62,7 @@
             backdrop-blur-md
             animate-float [animation-delay:1s]">
             <div class="text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                     <path fill-rule="evenodd"
                         d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
                         clip-rule="evenodd" />
@@ -79,7 +79,9 @@
                     Platform
                     Pendaftaran
                     <br />
-                    <span class="gradient-text text-blue-600 font-dm-serif italic">Talent Profesional</span>
+                    <span
+                        class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Talent
+                        Profesional</span>
                 </h1>
 
                 <p class="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -88,7 +90,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-                    <a class="bg-blue-600 text-white hover:bg-blue-600/90 shadow-md professional-hover text-lg px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300"
+                    <a class="bg-linear-to-r from-jitara-blue to-jitara-orange text-white hover:bg-jitara-orange/90 shadow-md professional-hover text-lg px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300"
                         href="/pages/auth/register.html">Daftar</a>
                     <a class="text-lg px-8 font-semibold border-2 border-slate-500 py-3 rounded-xl hover:bg-slate-200 hover:scale-105 transition-transform duration-300"
                         href="/pages/auth/login.html">Masuk</a>
@@ -113,14 +115,17 @@
                 <!-- card 1 -->
                 <div
                     class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
-                    <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
                     <div
-                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                    </div>
+                    <div
+                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
                         1
                     </div>
 
-                    <div class="mb-6 w-16 h-16 rounded-xl bg-blue-600/10 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                             <path
                                 d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
                         </svg>
@@ -132,14 +137,17 @@
                 <!-- card 2 -->
                 <div
                     class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
-                    <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
                     <div
-                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                    </div>
+                    <div
+                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
                         2
                     </div>
 
-                    <div class="mb-6 w-16 h-16 rounded-xl bg-blue-600/10 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                             <path fill-rule="evenodd"
                                 d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
                                 clip-rule="evenodd" />
@@ -155,14 +163,17 @@
                 <!-- card 3 -->
                 <div
                     class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative group bg-white hover:scale-105 transition-transform duration-300">
-                    <div class="absolute z-0 top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
                     <div
-                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
+                    </div>
+                    <div
+                        class="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-linear-to-r from-jitara-blue to-jitara-orange flex items-center justify-center text-white font-bold text-lg shadow-md">
                         3
                     </div>
 
-                    <div class="mb-6 w-16 h-16 rounded-xl bg-blue-600/10 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                             <path fill-rule="evenodd"
                                 d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
                                 clip-rule="evenodd" />
@@ -185,8 +196,9 @@
                 <div
                     class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
                     <div>
-                        <div class="mb-6 w-16 h-16 rounded-xl bg-blue-600/10 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                        <div
+                            class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                                 <path fill-rule="evenodd"
                                     d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
                                     clip-rule="evenodd" />
@@ -200,15 +212,16 @@
                             seperti
                             CV, KTP, ijazah untuk diverifikasi.</p>
                     </div>
-                    <a class="mt-10 bg-blue-600 text-white hover:bg-blue-600/90 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
+                    <a class="mt-10 bg-linear-to-r from-jitara-blue to-jitara-orange text-white hover:bg-jitara-orange/90 shadow-md px-8 py-3 rounded-xl font-semibold text-center"
                         href="/pages/auth/register.html">Mulai Daftar</a>
                 </div>
 
                 <!-- card 2 -->
                 <div
                     class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
-                    <div class="mb-6 w-16 h-16 rounded-xl bg-blue-600/10 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                             <path fill-rule="evenodd"
                                 d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
                                 clip-rule="evenodd" />
@@ -227,8 +240,9 @@
                 <div
                     class="border-2 flex flex-col justify-between border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
                     <div>
-                        <div class="mb-6 w-16 h-16 rounded-xl bg-blue-600/10 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#155DFC" class="size-8">
+                        <div
+                            class="mb-6 w-16 h-16 rounded-xl bg-linear-to-r from-jitara-blue/50 to-jitara-orange/50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d26206" class="size-8">
                                 <path fill-rule="evenodd"
                                     d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
                                     clip-rule="evenodd" />
@@ -251,7 +265,8 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-                    Artikel <span class="gradient-text text-blue-600 font-dm-serif">Terbaru</span>
+                    Artikel <span
+                        class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Terbaru</span>
                 </h2>
                 <p class="text-slate-500 text-lg max-w-2xl mx-auto mb-8">
                     Tips dan informasi terkini seputar dunia kerja dan pengembangan karir </p>
@@ -272,7 +287,7 @@
                     <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
                         mempersiapkan
                         wawancara, dan membangun jaringan profesional.</p>
-                    <a class="text-blue-600 font-semibold hover:underline" href="/pages/articles/article1.html">Baca
+                    <a class="text-jitara-blue font-semibold hover:underline" href="/pages/articles/article1.html">Baca
                         Selengkapnya &rarr;</a>
                 </div>
                 <!-- card 2 -->
@@ -288,7 +303,7 @@
                     <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
                         mempersiapkan
                         wawancara, dan membangun jaringan profesional.</p>
-                    <a class="text-blue-600 font-semibold hover:underline" href="/pages/articles/article1.html">Baca
+                    <a class="text-jitara-blue font-semibold hover:underline" href="/pages/articles/article1.html">Baca
                         Selengkapnya &rarr;</a>
                 </div>
                 <!-- card 3 -->
@@ -304,7 +319,7 @@
                     <p class="text-slate-500 leading-relaxed mb-6">Pelajari cara membuat CV menarik,
                         mempersiapkan
                         wawancara, dan membangun jaringan profesional.</p>
-                    <a class="text-blue-600 font-semibold hover:underline" href="/pages/articles/article1.html">Baca
+                    <a class="text-jitara-blue font-semibold hover:underline" href="/pages/articles/article1.html">Baca
                         Selengkapnya &rarr;</a>
                 </div>
             </div>
@@ -316,7 +331,9 @@
         <div class="container mx-auto px-4 py-24">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-                    FAQ <span class="gradient-text text-blue-600 font-dm-serif">Seputar Jitara Talent</span>
+                    FAQ <span
+                        class="gradient-text bg-linear-to-r from-jitara-blue to-jitara-orange bg-clip-text text-transparent">Seputar
+                        Jitara Talent</span>
                 </h2>
                 <p class="text-slate-500 text-lg max-w-2xl mx-auto">
                     Pertanyaan yang sering diajukan tentang penggunaan Jitara Talent </p>
@@ -351,13 +368,14 @@
             </div>
     </section>
 
-    <footer class="bg-blue-600">
+    <footer class="bg-linear-to-r from-jitara-blue to-jitara-orange">
         <div class="container mx-auto px-4 py-12">
             <div class="text-center text-white">
                 <p class="text-sm">&copy; 2025 Jitara Talent. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

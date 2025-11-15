@@ -3,6 +3,8 @@
     --font-dm-serif: "Playfair Display", serif;
     --font-montserrat: "Montserrat", sans-serif;
     --animate-float: float 3s ease-in-out infinite;
+    --color-jitara-blue: #003376;
+    --color-jitara-orange: #d26206;
 
     @keyframes float {
         0%,
