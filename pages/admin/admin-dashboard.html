@@ -15,31 +15,31 @@
 
 <body>
     <header
-        class="fixed flex justify-between items-center bg-white/95 z-50 w-full border-b-2 border-b-slate-100 h-18 px-10 gap-2">
+        class="fixed flex justify-between items-center bg-white z-50 w-full border-b-2 border-b-slate-100 h-18 px-10 gap-2">
         <img src="../../assets/img/JitaraTalentaDeck.png" alt="Jitara Logo" class="h-12 w-auto" />
-        <nav class="flex items-center gap-4">
+        <nav class="hidden lg:flex items-center gap-4">
             <a href="/blog"
-                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-linear-to-r from-jitara-blue to-jitara-orange">
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Blog
             </a>
             <a href="/faq"
-                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-linear-to-r from-jitara-blue to-jitara-orange">
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 FAQ
             </a>
             <a href="/pengalaman"
-                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-linear-to-r from-jitara-blue to-jitara-orange">
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Pengalaman
             </a>
             <a href="/kop-surat"
-                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-linear-to-r from-jitara-blue to-jitara-orange">
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Kop Surat
             </a>
             <a href="/talent-pool"
-                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-linear-to-r from-jitara-blue to-jitara-orange">
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Talent Pool
             </a>
             <a href="/clients"
-                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-linear-to-r from-jitara-blue to-jitara-orange">
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Clients
             </a>
             <span class="text-sm text-slate-500 ml-2 bg-slate-200 px-3 py-2 rounded-xl">admin@admin.com</span>
@@ -48,6 +48,60 @@
                 Keluar
             </a>
         </nav>
+        <!-- Mobile Button (tetap di header) -->
+        <button id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu"
+            class="flex md:hidden items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100 z-50">
+            <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Mobile dropdown (FIXED, center horizontally) -->
+        <div id="mobileMenu" class="fixed top-16 left-0 right-0 z-40 flex justify-center pointer-events-none">
+            <!-- Inner card: actual menu box, animated from top (origin-top-center) -->
+            <div class="origin-top scale-y-0 opacity-0 transform transition-all duration-300 pointer-events-none
+           w-11/12 max-w-xs bg-white border border-slate-100 rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col items-center py-3 gap-2">
+                    <a href="/blog"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Blog
+                    </a>
+                    <a href="/faq"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        FAQ
+                    </a>
+                    <a href="/pengalaman"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Pengalaman
+                    </a>
+                    <a href="/kop-surat"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Kop Surat
+                    </a>
+                    <a href="/talent-pool"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Talent Pool
+                    </a>
+                    <a href="/clients"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Clients
+                    </a>
+
+                    <span class="w-full block text-center text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">
+                        admin@admin.com
+                    </span>
+
+                    <button
+                        class="w-full text-center text-sm px-4 py-2 bg-red-500 rounded-xl text-white transform transition-transform duration-200 hover:scale-105">
+                        Keluar
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <!-- main -->
@@ -61,10 +115,10 @@
         </section>
         <!-- stats card -->
         <section class="relative overflow-hidden bg-white py-10">
-            <div class="grid grid-cols-4 gap-4 max-w-9/12 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-9/12 mx-auto">
                 <!-- stats 1 -->
                 <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                    class="border-2 md:col-span-1 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
                     <div
                         class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
                     </div>
@@ -84,7 +138,7 @@
                 </div>
                 <!-- stats 2 -->
                 <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                    class="border-2 md:col-span-1 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
                     <div
                         class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
                     </div>
@@ -105,7 +159,7 @@
                 </div>
                 <!-- stats 3 -->
                 <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                    class="border-2 md:col-span-1 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
                     <div
                         class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
                     </div>
@@ -126,7 +180,7 @@
                 </div>
                 <!-- stats 4 -->
                 <div
-                    class="border-2 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
+                    class="border-2 md:col-span-1 border-slate-600/10 shadow-lg rounded-xl p-8 relative bg-white hover:scale-105 transition-transform duration-300">
                     <div
                         class="absolute z-0 top-0 left-0 w-full h-1 bg-linear-to-r from-jitara-blue to-jitara-orange rounded-t-xl">
                     </div>

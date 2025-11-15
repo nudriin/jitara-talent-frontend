@@ -167,3 +167,26 @@ searchInput.addEventListener("input", (e) => {
 // Initial render
 updateStats();
 renderTable();
+
+// Mobile menu toggle
+const btn = document.getElementById('mobileMenuBtn');
+const menuWrapper = document.getElementById('mobileMenu');
+const menuCard = menuWrapper.querySelector('div'); // inner card
+const iconOpen = document.getElementById('iconOpen');
+const iconClose = document.getElementById('iconClose');
+
+btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+
+    menuCard.classList.toggle('scale-y-0');
+    menuCard.classList.toggle('scale-y-100');
+    menuCard.classList.toggle('opacity-0');
+    menuCard.classList.toggle('opacity-100');
+
+    menuCard.classList.toggle('pointer-events-none');
+    menuCard.classList.toggle('pointer-events-auto');
+});
