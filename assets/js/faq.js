@@ -79,11 +79,11 @@ function renderTable() {
                 <td class="px-4 py-3 text-center">
                     <div class="flex items-center justify-center gap-2">
                         <a href="faq-edit.html?id=${faq.id}"
-                            class="px-3 py-1 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm rounded-md transition-colors">
+                            class="px-3 py-1 border-2 border-jitara-blue text-jitara-blue hover:bg-jitara-blue hover:text-white text-sm rounded-md transition-colors">
                             Edit
                         </a>
                         <button onclick="deleteFAQ(${faq.id})"
-                            class="px-3 py-1 border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white text-sm rounded-md transition-colors">
+                            class="cursor-pointer px-3 py-1 border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white text-sm rounded-md transition-colors">
                             Hapus
                         </button>
                     </div>

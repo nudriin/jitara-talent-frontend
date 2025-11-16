@@ -44,7 +44,7 @@ function renderTalentPoolTable() {
                 <td class="px-4 py-3 text-slate-500">${talent.bergabung}</td>
                 <td class="px-4 py-3 text-center">
                     <a href="talent-pool-detail.html?id=${talent.id}"
-                        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-md transition-colors inline-block">
+                        class="px-4 py-2 bg-jitara-orange hover:bg-jitara-blue text-white text-sm rounded-md transition-colors inline-block">
                         Detail
                     </a>
                 </td>
@@ -108,10 +108,18 @@ function loadTalentData() {
     const urlParams = new URLSearchParams(window.location.search);
     const talentId = urlParams.get('id');
 
-    if (talentId && document.getElementById('talent-info')) {
+    if (talentId) {
         const talent = talentPool.find(t => t.id === parseInt(talentId));
         if (talent) {
-            document.getElementById('talent-info').textContent = `${talent.nama} ${talent.email}`;
+            const talentNameEl = document.getElementById('talent-name');
+            const talentEmailEl = document.getElementById('talent-email');
+            
+            if (talentNameEl) {
+                talentNameEl.textContent = talent.nama;
+            }
+            if (talentEmailEl) {
+                talentEmailEl.textContent = talent.email;
+            }
         }
     }
 }
