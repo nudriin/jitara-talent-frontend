@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Client</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header
+        class="fixed flex justify-between items-center bg-white z-50 w-full border-b-2 border-b-slate-100 h-18 px-10 gap-2">
+        <img src="../../../assets/img/JitaraTalentaDeck.png" alt="Jitara Logo" class="h-12 w-auto" />
+        <nav class="hidden lg:flex items-center gap-4">
+            <a href="../blog/blog.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Blog
+            </a>
+            <a href="../faq/faq.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                FAQ
+            </a>
+            <a href="../experience/experience.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Pengalaman
+            </a>
+            <a href="../letterhead/letterhead.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Kop Surat
+            </a>
+            <a href="../talent-pool/talent-pool.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Talent Pool
+            </a>
+            <a href="client.html"
+                class="text-sm text-white transition-colors px-3 py-2 rounded-xl bg-jitara-orange">
+                Clients
+            </a>
+            <span class="text-sm text-slate-500 ml-2 bg-slate-200 px-3 py-2 rounded-xl">admin@admin.com</span>
+            <a
+                class="text-sm px-4 py-2 bg-red-500 rounded-xl text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                Keluar
+            </a>
+        </nav>
+        <!-- Mobile Button -->
+        <button id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu"
+            class="flex lg:hidden items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100 z-50">
+            <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Mobile dropdown -->
+        <div id="mobileMenu" class="fixed top-16 left-0 right-0 z-40 flex justify-center pointer-events-none">
+            <div class="origin-top scale-y-0 opacity-0 transform transition-all duration-300 pointer-events-none
+           w-11/12 max-w-xs bg-white border border-slate-100 rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col items-center py-3 gap-2">
+                    <a href="../blog/blog.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Blog
+                    </a>
+                    <a href="../faq/faq.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        FAQ
+                    </a>
+                    <a href="../experience/experience.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Pengalaman
+                    </a>
+                    <a href="../letterhead/letterhead.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Kop Surat
+                    </a>
+                    <a href="../talent-pool/talent-pool.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Talent Pool
+                    </a>
+                    <a href="client.html"
+                        class="w-full text-center text-sm text-white px-3 py-2 rounded-xl transition-colors bg-jitara-orange">
+                        Clients
+                    </a>
+
+                    <span class="w-full block text-center text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">
+                        admin@admin.com
+                    </span>
+
+                    <button
+                        class="w-full text-center text-sm px-4 py-2 bg-red-500 rounded-xl text-white transform transition-transform duration-200 hover:scale-105">
+                        Keluar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="min-h-screen pt-18">
+        <!-- hero header -->
+        <section class="pt-16">
+            <div class="max-w-9/12 bg-jitara-orange/10 w-full mx-auto py-10 border border-jitara-orange px-4 rounded-xl relative z-10" style="box-shadow: 4px 6px 0px rgb(210, 98, 6);">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <h1 class="text-3xl font-bold">Daftar Client</h1>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+                        <div class="relative flex-1 sm:flex-initial sm:w-80">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                class="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                            <input type="text" id="search-input" placeholder="Cari nama/jenis/provinsi/kota"
+                                class="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                        </div>
+                        <button onclick="handleSearch()"
+                            class="px-4 py-2 bg-slate-600 text-white rounded-lg font-medium hover:bg-slate-700 transition-colors duration-300">
+                            Cari
+                        </button>
+                        <a href="../talent-pool/talent-pool.html"
+                            class="px-4 py-2 bg-jitara-orange text-white rounded-lg font-medium hover:bg-jitara-blue transition-colors duration-300 text-center">
+                            Talent Pool
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Client Form Section -->
+        <section class="relative bg-white py-10 -mt-4">
+            <div class="max-w-9/12 mx-auto">
+                <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white p-6 mb-6">
+                    <h2 class="text-xl font-bold text-slate-800 mb-4">Tambah Client Baru</h2>
+                    <form id="add-client-form" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="nama-client" class="block text-sm font-medium text-slate-700 mb-2">Nama Client</label>
+                                <input type="text" id="nama-client" name="nama-client" required
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                    placeholder="Masukkan nama client">
+                            </div>
+                            <div>
+                                <label for="jenis-client" class="block text-sm font-medium text-slate-700 mb-2">Jenis Client</label>
+                                <input type="text" id="jenis-client" name="jenis-client" required
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                    placeholder="Contoh: Pemerintah, Swasta">
+                            </div>
+                            <div>
+                                <label for="provinsi" class="block text-sm font-medium text-slate-700 mb-2">Provinsi</label>
+                                <input type="text" id="provinsi" name="provinsi" required
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                    placeholder="Masukkan provinsi">
+                            </div>
+                            <div>
+                                <label for="kab-kota" class="block text-sm font-medium text-slate-700 mb-2">Kab/Kota</label>
+                                <input type="text" id="kab-kota" name="kab-kota" required
+                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                    placeholder="Masukkan kabupaten/kota">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="alamat-lengkap" class="block text-sm font-medium text-slate-700 mb-2">Alamat Lengkap</label>
+                            <textarea id="alamat-lengkap" name="alamat-lengkap" rows="3" required
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent resize-y"
+                                placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit"
+                                class="cursor-pointer px-6 py-2 bg-jitara-orange text-white rounded-lg font-medium hover:bg-jitara-blue transition-colors duration-300 hover:scale-105">
+                                Tambah Client
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client List Table Section -->
+        <section class="relative pb-12 overflow-hidden bg-white">
+            <div class="container max-w-9/12 mx-auto">
+                <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white">
+                    <!-- Card Header -->
+                    <div class="p-6 border-b border-slate-200">
+                        <h2 class="text-2xl font-display font-bold">Daftar Client</h2>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-6">
+                        <!-- Table -->
+                        <div class="rounded-lg border border-slate-200 overflow-hidden overflow-x-auto">
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-100 hover:bg-slate-100">
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Nama</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Jenis</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Provinsi</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Kab/Kota</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Alamat</th>
+                                        <th class="px-4 py-3 text-center font-semibold text-sm border-b border-slate-200">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                    <!-- Table rows will be generated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Edit Client Modal -->
+    <div id="edit-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm bg-white/10">
+        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between rounded-t-xl">
+                <h2 class="text-2xl font-bold text-slate-800">Edit Client</h2>
+                <button onclick="closeEditModal()" class="text-slate-500 hover:text-slate-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <form id="edit-client-form" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="edit-nama" class="block text-sm font-medium text-slate-700 mb-2">Nama Client</label>
+                            <input type="text" id="edit-nama" name="nama" required
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="edit-jenis" class="block text-sm font-medium text-slate-700 mb-2">Jenis Client</label>
+                            <input type="text" id="edit-jenis" name="jenis" required
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="edit-provinsi" class="block text-sm font-medium text-slate-700 mb-2">Provinsi</label>
+                            <input type="text" id="edit-provinsi" name="provinsi" required
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="edit-kab-kota" class="block text-sm font-medium text-slate-700 mb-2">Kab/Kota</label>
+                            <input type="text" id="edit-kab-kota" name="kabKota" required
+                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="edit-alamat" class="block text-sm font-medium text-slate-700 mb-2">Alamat Lengkap</label>
+                        <textarea id="edit-alamat" name="alamat" rows="3" required
+                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent resize-y"></textarea>
+                    </div>
+                    <div class="flex justify-end gap-3 pt-4 border-t border-slate-200">
+                        <button type="button" onclick="closeEditModal()"
+                            class="px-6 py-2 bg-slate-500 text-white rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300">
+                            Batal
+                        </button>
+                        <button type="submit"
+                            class="px-6 py-2 bg-jitara-orange text-white rounded-lg font-medium hover:bg-jitara-blue transition-colors duration-300">
+                            Simpan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-linear-to-r from-jitara-blue to-jitara-orange">
+        <div class="container mx-auto px-4 py-12">
+            <div class="text-center text-white">
+                <p class="text-sm">&copy; 2025 Jitara Talent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/client.js"></script>
+</body>
+
+</html>
+
