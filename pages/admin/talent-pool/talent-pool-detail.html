@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrasi Penugasan</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header
+        class="fixed flex justify-between items-center bg-white z-50 w-full border-b-2 border-b-slate-100 h-18 px-10 gap-2">
+        <img src="../../../assets/img/JitaraTalentaDeck.png" alt="Jitara Logo" class="h-12 w-auto" />
+        <nav class="hidden lg:flex items-center gap-4">
+            <a href="../blog/blog.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Blog
+            </a>
+            <a href="../faq/faq.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                FAQ
+            </a>
+            <a href="../experience/experience.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Pengalaman
+            </a>
+            <a href="../letterhead/letterhead.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Kop Surat
+            </a>
+            <a href="talent-pool.html"
+                class="text-sm text-white transition-colors px-3 py-2 rounded-xl bg-jitara-orange">
+                Talent Pool
+            </a>
+            <a href="/clients"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Clients
+            </a>
+            <span class="text-sm text-slate-500 ml-2 bg-slate-200 px-3 py-2 rounded-xl">admin@admin.com</span>
+            <a
+                class="text-sm px-4 py-2 bg-red-500 rounded-xl text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                Keluar
+            </a>
+        </nav>
+        <!-- Mobile Button -->
+        <button id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu"
+            class="flex lg:hidden items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100 z-50">
+            <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Mobile dropdown -->
+        <div id="mobileMenu" class="fixed top-16 left-0 right-0 z-40 flex justify-center pointer-events-none">
+            <div class="origin-top scale-y-0 opacity-0 transform transition-all duration-300 pointer-events-none
+           w-11/12 max-w-xs bg-white border border-slate-100 rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col items-center py-3 gap-2">
+                    <a href="../blog/blog.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Blog
+                    </a>
+                    <a href="../faq/faq.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        FAQ
+                    </a>
+                    <a href="../experience/experience.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Pengalaman
+                    </a>
+                    <a href="../letterhead/letterhead.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Kop Surat
+                    </a>
+                    <a href="talent-pool.html"
+                        class="w-full text-center text-sm text-white px-3 py-2 rounded-xl transition-colors bg-jitara-orange">
+                        Talent Pool
+                    </a>
+                    <a href="/clients"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Clients
+                    </a>
+
+                    <span class="w-full block text-center text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">
+                        admin@admin.com
+                    </span>
+
+                    <button
+                        class="w-full text-center text-sm px-4 py-2 bg-red-500 rounded-xl text-white transform transition-transform duration-200 hover:scale-105">
+                        Keluar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="min-h-screen pt-18">
+        <!-- hero header -->
+        <section class="relative pt-16 overflow-hidden bg-white">
+            <div class="px-4 max-w-9/12 mx-auto bg-linear-to-r from-jitara-blue to-jitara-orange py-10 rounded-xl">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl font-bold text-white">Administrasi Penugasan</h1>
+                        <p id="talent-info" class="text-sm text-slate-300 mt-1">test1234 test1234@gmail.com</p>
+                    </div>
+                    <a href="talent-pool.html"
+                        class="px-6 py-2 bg-white text-slate-700 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-md">
+                        Kembali
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="relative pb-12 overflow-hidden bg-white py-10">
+            <div class="container max-w-9/12 mx-auto">
+                <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white">
+                    <div class="p-6">
+                        <form id="assignment-form" class="space-y-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                <!-- Left Column -->
+                                <div class="space-y-6">
+                                    <!-- Daftar Client -->
+                                    <div>
+                                        <label for="client" class="block text-sm font-medium text-slate-700 mb-2">Daftar Client</label>
+                                        <select id="client" name="client" required
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                            <option value="">Pilih client</option>
+                                            <option value="disdik-kalteng">Disdik Kalteng</option>
+                                            <option value="client-2">Client 2</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Nama Project -->
+                                    <div>
+                                        <label for="nama-project" class="block text-sm font-medium text-slate-700 mb-2">Nama Project</label>
+                                        <input type="text" id="nama-project" name="nama-project" required
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                            placeholder="Contoh: Implementasi Sistem X">
+                                    </div>
+
+                                    <!-- Koordinat -->
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="koordinat-lat" class="block text-sm font-medium text-slate-700 mb-2">Koordinat (Lat)</label>
+                                            <input type="text" id="koordinat-lat" name="koordinat-lat"
+                                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                                placeholder="-6.200000" value="-6.200000">
+                                        </div>
+                                        <div>
+                                            <label for="koordinat-lng" class="block text-sm font-medium text-slate-700 mb-2">Koordinat (Lng)</label>
+                                            <input type="text" id="koordinat-lng" name="koordinat-lng"
+                                                class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                                placeholder="106.800000" value="106.800000">
+                                        </div>
+                                    </div>
+
+                                    <!-- Gunakan Lokasi Saat Ini -->
+                                    <div>
+                                        <button type="button" onclick="getCurrentLocation()"
+                                            class="flex items-center gap-2 px-4 py-2 bg-jitara-blue text-white rounded-lg font-medium hover:bg-jitara-orange transition-colors duration-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                                <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                                            </svg>
+                                            Gunakan Lokasi Saat Ini
+                                        </button>
+                                    </div>
+
+                                    <!-- Durasi Kerja (Mulai) -->
+                                    <div>
+                                        <label for="durasi-mulai" class="block text-sm font-medium text-slate-700 mb-2">Durasi Kerja (Mulai)</label>
+                                        <input type="date" id="durasi-mulai" name="durasi-mulai" required
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                    </div>
+
+                                    <!-- Nilai Kontrak/Fee -->
+                                    <div>
+                                        <label for="nilai-kontrak" class="block text-sm font-medium text-slate-700 mb-2">Nilai Kontrak/Fee (Rp)</label>
+                                        <input type="text" id="nilai-kontrak" name="nilai-kontrak"
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                            placeholder="contoh: 2500000">
+                                    </div>
+
+                                    <!-- Catatan Tambahan -->
+                                    <div>
+                                        <label for="catatan" class="block text-sm font-medium text-slate-700 mb-2">Catatan Tambahan</label>
+                                        <textarea id="catatan" name="catatan" rows="4"
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent resize-y"
+                                            placeholder="Catatan tambahan..."></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="space-y-6">
+                                    <!-- Ditugaskan Sebagai -->
+                                    <div>
+                                        <label for="peran" class="block text-sm font-medium text-slate-700 mb-2">Ditugaskan Sebagai (Master Pengalaman)</label>
+                                        <select id="peran" name="peran" required
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                            <option value="">Pilih peran</option>
+                                            <option value="ui-ux-design">UI UX Design</option>
+                                            <option value="web-development">Web Development</option>
+                                            <option value="mobile-development">Mobile Development</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Lokasi Penempatan -->
+                                    <div>
+                                        <label for="lokasi-penempatan" class="block text-sm font-medium text-slate-700 mb-2">Lokasi Penempatan</label>
+                                        <input type="text" id="lokasi-penempatan" name="lokasi-penempatan" required
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                            placeholder="Alamat lengkap">
+                                    </div>
+
+                                    <!-- Durasi Kerja (Selesai) -->
+                                    <div>
+                                        <label for="durasi-selesai" class="block text-sm font-medium text-slate-700 mb-2">Durasi Kerja (Selesai)</label>
+                                        <input type="date" id="durasi-selesai" name="durasi-selesai" required
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                    </div>
+
+                                    <!-- Nomor Surat -->
+                                    <div>
+                                        <label for="nomor-surat" class="block text-sm font-medium text-slate-700 mb-2">Nomor Surat</label>
+                                        <input type="text" id="nomor-surat" name="nomor-surat"
+                                            class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
+                                            placeholder="Otomatis jika dikosongkan">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Button -->
+                            <div class="flex gap-4 pt-4">
+                                <button type="submit"
+                                    class="px-6 py-2 bg-jitara-orange text-white rounded-xl font-medium hover:bg-jitara-blue transition-colors duration-300 hover:scale-105 cursor-pointer">
+                                    Simpan & Generate
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Riwayat Penugasan Section -->
+        <section class="relative pb-12 overflow-hidden bg-white">
+            <div class="container max-w-9/12 mx-auto">
+                <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white">
+                    <!-- Card Header -->
+                    <div class="p-6 border-b border-slate-200">
+                        <h2 class="text-2xl font-display font-bold">Riwayat Penugasan</h2>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-6">
+                        <!-- Table -->
+                        <div class="rounded-lg border border-slate-200 overflow-hidden overflow-x-auto mb-6">
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-100 hover:bg-slate-100">
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Client</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Peran</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Judul</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Tanggal</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Status</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">Dokumen</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-table-body">
+                                    <!-- Table rows will be generated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Upload Final Section -->
+                        <div class="border-t border-slate-200 pt-6">
+                            <h3 class="text-lg font-semibold text-slate-700 mb-4">Upload Final</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                                <div>
+                                    <label for="doc-type" class="block text-sm font-medium text-slate-700 mb-2">Jenis Dokumen</label>
+                                    <select id="doc-type" name="doc-type"
+                                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                        <option value="kontrak" selected>Kontrak</option>
+                                        <option value="ttd">TTD</option>
+                                        <option value="penempatan">Penempatan</option>
+                                        <option value="tugas">Tugas</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="doc-category" class="block text-sm font-medium text-slate-700 mb-2">Kategori</label>
+                                    <select id="doc-category" name="doc-category"
+                                        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                        <option value="ttd" selected>TTD</option>
+                                        <option value="kontrak">Kontrak</option>
+                                        <option value="final">Final</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="doc-file" class="block text-sm font-medium text-slate-700 mb-2">File</label>
+                                    <input type="file" id="doc-file" name="doc-file"
+                                        class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-jitara-orange file:text-white hover:file:bg-jitara-blue transition-colors cursor-pointer">
+                                </div>
+                                <div>
+                                    <button type="button" onclick="uploadFinal()"
+                                        class="w-full px-4 py-2 bg-jitara-orange text-white rounded-lg font-medium hover:bg-jitara-blue transition-colors duration-300 hover:scale-105 cursor-pointer">
+                                        Upload Final
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-linear-to-r from-jitara-blue to-jitara-orange">
+        <div class="container mx-auto px-4 py-12">
+            <div class="text-center text-white">
+                <p class="text-sm">&copy; 2025 Jitara Talent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/talent-pool.js"></script>
+</body>
+
+</html>
+
