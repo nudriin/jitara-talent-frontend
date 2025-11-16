@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header
+        class="fixed flex justify-between items-center bg-white z-50 w-full border-b-2 border-b-slate-100 h-18 px-10 gap-2">
+        <img src="../../../assets/img/JitaraTalentaDeck.png" alt="Jitara Logo" class="h-12 w-auto" />
+        <nav class="hidden lg:flex items-center gap-4">
+            <a href="/pages/admin/blog/blog.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Blog
+            </a>
+            <a href="/faq"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                FAQ
+            </a>
+            <a href="/pengalaman"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Pengalaman
+            </a>
+            <a href="/kop-surat"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Kop Surat
+            </a>
+            <a href="/talent-pool"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Talent Pool
+            </a>
+            <a href="/clients"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
+                Clients
+            </a>
+            <span class="text-sm text-slate-500 ml-2 bg-slate-200 px-3 py-2 rounded-xl">admin@admin.com</span>
+            <a
+                class="text-sm px-4 py-2 bg-red-500 rounded-xl text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                Keluar
+            </a>
+        </nav>
+        <!-- Mobile Button (tetap di header) -->
+        <button id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu"
+            class="flex lg:hidden items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100 z-50">
+            <svg id="iconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Mobile dropdown (FIXED, center horizontally) -->
+        <div id="mobileMenu" class="fixed top-16 left-0 right-0 z-40 flex justify-center pointer-events-none">
+            <!-- Inner card: actual menu box, animated from top (origin-top-center) -->
+            <div class="origin-top scale-y-0 opacity-0 transform transition-all duration-300 pointer-events-none
+           w-11/12 max-w-xs bg-white border border-slate-100 rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col items-center py-3 gap-2">
+                    <a href="/pages/admin/blog/blog.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Blog
+                    </a>
+                    <a href="/faq"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        FAQ
+                    </a>
+                    <a href="/pengalaman"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Pengalaman
+                    </a>
+                    <a href="/kop-surat"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Kop Surat
+                    </a>
+                    <a href="/talent-pool"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Talent Pool
+                    </a>
+                    <a href="/clients"
+                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Clients
+                    </a>
+
+                    <span class="w-full block text-center text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">
+                        admin@admin.com
+                    </span>
+
+                    <button
+                        class="w-full text-center text-sm px-4 py-2 bg-red-500 rounded-xl text-white transform transition-transform duration-200 hover:scale-105">
+                        Keluar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pb-12 overflow-hidden bg-white pt-28">
+        <div class="container max-w-9/12 mx-auto">
+            <div class="">
+                <!-- Card Container -->
+                <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white">
+                    <!-- Card Header -->
+                    <div class="p-6 border-b border-slate-200">
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Table -->
+                            <div class="rounded-lg border border-slate-200 overflow-hidden overflow-x-auto">
+                                <table class="w-full border-collapse">
+                                    <thead>
+                                        <tr class="bg-slate-100 hover:bg-slate-100">
+                                            <th
+                                                class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Cover</th>
+                                            <th
+                                                class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Judul</th>
+                                            <th
+                                                class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Status</th>
+                                            <th
+                                                class="px-4 py-3 text-center font-semibold text-sm border-b border-slate-200">
+                                                Terbit</th>
+                                            <th
+                                                class="px-4 py-3 text-center font-semibold text-sm border-b border-slate-200">
+                                                Aksi</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body">
+                                        <!-- Table rows will be generated by JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-center mt-6">
+                                <div class="text-sm text-slate-500" id="pagination-info">
+                                    Halaman 1 dari 1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
