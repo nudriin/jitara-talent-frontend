@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Pengalaman</title>
+    <title>Monitoring Absensi Harian</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,8 @@
                 class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 FAQ
             </a>
-            <a href="experience.html"
-                class="text-sm text-white transition-colors px-3 py-2 rounded-xl bg-jitara-orange">
+            <a href="../experience/experience.html"
+                class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Pengalaman
             </a>
             <a href="../letterhead/letterhead.html"
@@ -45,7 +45,7 @@
             <!-- Kelola Absensi Dropdown -->
             <div class="relative group">
                 <button
-                    class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange flex items-center gap-1">
+                    class="text-sm text-white transition-colors px-3 py-2 rounded-xl bg-jitara-orange flex items-center gap-1">
                     Kelola Absensi
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -53,7 +53,7 @@
                 </button>
                 <div
                     class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="../attendance/attendance.html"
+                    <a href="attendance.html"
                         class="block px-4 py-2 text-sm text-slate-700 hover:bg-jitara-orange hover:text-white rounded-t-xl transition-colors">
                         Absen
                     </a>
@@ -93,21 +93,29 @@
                         class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
                         FAQ
                     </a>
-                    <a href="experience.html"
-                        class="w-full text-center text-sm text-white px-3 py-2 rounded-xl transition-colors bg-jitara-orange">
+                    <a href="../experience/experience.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
                         Pengalaman
                     </a>
                     <a href="../letterhead/letterhead.html"
-                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
                         Kop Surat
                     </a>
                     <a href="../talent-pool/talent-pool.html"
-                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
                         Talent Pool
                     </a>
                     <a href="../client/client.html"
-                        class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
                         Clients
+                    </a>
+                    <a href="attendance.html"
+                        class="w-full text-center text-sm text-white px-3 py-2 rounded-xl transition-colors bg-jitara-orange">
+                        Absen
+                    </a>
+                    <a href="../reports/reports.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Laporan Harian
                     </a>
 
                     <span class="w-full block text-center text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">
@@ -128,68 +136,87 @@
         <!-- hero header -->
         <section class="pt-16">
             <div class="max-w-9/12 bg-jitara-orange/10 w-full mx-auto py-10 border border-jitara-orange px-4 rounded-xl relative z-10" style="box-shadow: 4px 6px 0px rgb(210, 98, 6);">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <h1 class="text-3xl font-bold">Edit Pengalaman</h1>
-                    <a href="experience.html"
-                        class="px-6 py-2 bg-white text-slate-700 rounded-xl font-medium hover:scale-105 transition-transform duration-300 shadow-md">
-                        Kembali
-                    </a>
+                <div>
+                    <h1 class="text-3xl font-bold">Monitoring Absensi Harian</h1>
+                    <p class="text-sm text-slate-700">Pantau kehadiran talent secara real-time</p>
                 </div>
             </div>
         </section>
 
-        <!-- Form Section -->
+        <!-- Attendance Table Section -->
         <section class="relative pb-12 overflow-hidden bg-white py-10">
             <div class="container max-w-9/12 mx-auto">
-                <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white">
-                    <div class="p-6">
-                        <form id="experience-form" class="space-y-6">
-                            <!-- Key -->
-                            <div>
-                                <label for="key" class="block text-sm font-medium text-slate-700 mb-2">Key</label>
-                                <input type="text" id="key" name="key" required
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
-                                    placeholder="uiux, grafis, dll">
+                <div class="">
+                    <!-- Card Container -->
+                    <div class="border-2 border-slate-600/10 shadow-lg rounded-xl bg-white">
+                        <!-- Card Header with Filters -->
+                        <div class="p-6 border-b border-slate-200">
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                                <h2 class="text-2xl font-display font-bold">Daftar Absensi</h2>
+                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
+                                    <div class="relative flex-1 sm:flex-initial">
+                                        <input type="date" id="date-from" 
+                                            class="w-full sm:w-auto px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                    </div>
+                                    <div class="relative flex-1 sm:flex-initial">
+                                        <input type="date" id="date-to" 
+                                            class="w-full sm:w-auto px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                    </div>
+                                    <div class="relative flex-1 sm:flex-initial">
+                                        <input type="text" id="search-input" placeholder="Cari talent/client/proyek"
+                                            class="w-full sm:w-auto px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
+                                    </div>
+                                    <button id="filter-btn"
+                                        class="px-6 py-2 bg-jitara-orange text-white rounded-lg font-medium hover:bg-jitara-blue transition-colors duration-300 hover:scale-105">
+                                        Filter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <!-- Table -->
+                            <div class="rounded-lg border border-slate-200 overflow-hidden overflow-x-auto">
+                                <table class="w-full border-collapse">
+                                    <thead>
+                                        <tr class="bg-slate-100 hover:bg-slate-100">
+                                            <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Tanggal
+                                            </th>
+                                            <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Talent
+                                            </th>
+                                            <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Client/Proyek
+                                            </th>
+                                            <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Check-In
+                                            </th>
+                                            <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Check-Out
+                                            </th>
+                                            <th class="px-4 py-3 text-left font-semibold text-sm border-b border-slate-200">
+                                                Lokasi
+                                            </th>
+                                            <th class="px-4 py-3 text-center font-semibold text-sm border-b border-slate-200">
+                                                Selfie
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body">
+                                        <!-- Table rows will be generated by JavaScript -->
+                                    </tbody>
+                                </table>
                             </div>
 
-                            <!-- Label -->
-                            <div>
-                                <label for="label" class="block text-sm font-medium text-slate-700 mb-2">Label</label>
-                                <input type="text" id="label" name="label" required
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
-                                    placeholder="UI UX Design">
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-center mt-6">
+                                <div class="text-sm text-slate-500" id="pagination-info">
+                                    Halaman 1 dari 1
+                                </div>
                             </div>
-
-                            <!-- Posisi -->
-                            <div>
-                                <label for="posisi" class="block text-sm font-medium text-slate-700 mb-2">Posisi</label>
-                                <input type="number" id="posisi" name="posisi" min="1" required
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent"
-                                    placeholder="Urutan tampil">
-                            </div>
-
-                            <!-- Status -->
-                            <div>
-                                <label for="status" class="block text-sm font-medium text-slate-700 mb-2">Status</label>
-                                <select id="status" name="status" required
-                                    class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jitara-orange focus:border-transparent">
-                                    <option value="active">Aktif</option>
-                                    <option value="inactive">Tidak Aktif</option>
-                                </select>
-                            </div>
-
-                            <!-- Action Buttons -->
-                            <div class="flex gap-4 pt-4">
-                                <button type="submit"
-                                    class="px-6 py-2 bg-jitara-orange text-white rounded-xl font-medium hover:bg-jitara-blue transition-colors duration-300 hover:scale-105 cursor-pointer">
-                                    Simpan
-                                </button>
-                                <a href="experience.html"
-                                    class="px-6 py-2 bg-white text-slate-700 border-2 border-slate-300 rounded-xl font-medium hover:bg-slate-50 transition-colors duration-300 hover:scale-105">
-                                    Batal
-                                </a>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -204,7 +231,7 @@
         </div>
     </footer>
 
-    <script src="../../../assets/js/experience.js"></script>
+    <script src="../../../assets/js/attendance.js"></script>
 </body>
 
 </html>

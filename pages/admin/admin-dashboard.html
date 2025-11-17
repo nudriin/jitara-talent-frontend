@@ -42,6 +42,27 @@
                 class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange">
                 Clients
             </a>
+            <!-- Kelola Absensi Dropdown -->
+            <div class="relative group">
+                <button
+                    class="text-sm text-slate-500 hover:text-white transition-colors px-3 py-2 rounded-xl hover:bg-jitara-orange flex items-center gap-1">
+                    Kelola Absensi
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div
+                    class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <a href="attendance/attendance.html"
+                        class="block px-4 py-2 text-sm text-slate-700 hover:bg-jitara-orange hover:text-white rounded-t-xl transition-colors">
+                        Absen
+                    </a>
+                    <a href="reports/reports.html"
+                        class="block px-4 py-2 text-sm text-slate-700 hover:bg-jitara-orange hover:text-white rounded-b-xl transition-colors">
+                        Laporan Harian
+                    </a>
+                </div>
+            </div>
             <span class="text-sm text-slate-500 ml-2 bg-slate-200 px-3 py-2 rounded-xl">admin@admin.com</span>
             <a
                 class="text-sm px-4 py-2 bg-red-500 rounded-xl text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -88,6 +109,14 @@
                     <a href="client/client.html"
                         class="w-full text-center text-sm text-slate-600 px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
                         Clients
+                    </a>
+                    <a href="attendance/attendance.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Absen
+                    </a>
+                    <a href="reports/reports.html"
+                        class="w-full text-center text-sm text-slate-600 hover:text-white px-3 py-2 rounded-xl transition-colors hover:bg-jitara-orange">
+                        Laporan Harian
                     </a>
 
                     <span class="w-full block text-center text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-xl">
